@@ -4,7 +4,7 @@ import { difference } from './helpers'
 
 export default function moveCore(gameObjects, piece, toPosition) {
   let newMatchState = JSON.parse(JSON.stringify(gameObjects))
-  if (piece.type === ItemTypes.BALL) {
+  if (piece === ItemTypes.BALL) {
     newMatchState = moveBall(newMatchState, toPosition)
   } else {
     newMatchState = movePlayer(newMatchState, piece, toPosition)
